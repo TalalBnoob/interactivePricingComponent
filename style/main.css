@@ -2,4 +2,28 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  background-color: hsl(230deg, 100%, 99%);
+  font-family: "Manrope", sans-serif;
+}
+
+.header {
+  background-image: url("/img/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-position-y: center;
+  height: 200px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 4rem auto;
+}
+.header h1 {
+  padding-top: 3.8rem;
+  color: hsl(227deg, 35%, 25%);
+  font-weight: 800;
+}
+.header h3 {
+  color: hsl(225deg, 20%, 60%);
+  font-weight: 600;
 }/*# sourceMappingURL=main.css.map */

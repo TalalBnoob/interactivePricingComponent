@@ -4,4 +4,28 @@ body {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	background-color: $mainBackground;
+	font-family: $fontFamily;
+}
+
+.header {
+	background-image: url('/img/pattern-circles.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	background-position-y: center;
+	height: 200px;
+	width: fit-content;
+	margin: 4rem auto;
+
+	& h1 {
+		padding-top: 3.8rem;
+		color: $text_CTABackground;
+		font-weight: 800;
+	}
+
+	& h3 {
+		color: $text;
+		font-weight: 600;
+	}
 }
