@@ -4,11 +4,16 @@ body {
 	box-sizing: border-box;
 	padding: 0;
 	margin: 0;
+	background-image: url(/img/bg-pattern.svg);
+	background-position: center;
+	background-position-y: top;
+	background-repeat: no-repeat;
+	background-size: contain;
 	background-color: $mainBackground;
 	font-family: $fontFamily;
 }
 
-.header {
+header {
 	background-image: url('/img/pattern-circles.svg');
 	background-repeat: no-repeat;
 	background-size: contain;
@@ -17,15 +22,62 @@ body {
 	height: 200px;
 	width: fit-content;
 	margin: 4rem auto;
+	text-align: center;
 
 	& h1 {
 		padding-top: 3.8rem;
 		color: $text_CTABackground;
 		font-weight: 800;
+		font-size: 40px;
 	}
 
 	& h3 {
 		color: $text;
 		font-weight: 600;
+	}
+}
+
+main {
+	width: 50rem;
+	height: 30rem;
+	background-color: $pricingComponentBackground;
+	margin: auto;
+	box-shadow: 1px 1px 20px 1px rgba($color: $text, $alpha: 0.2);
+	border-radius: 10px;
+	& .container {
+		width: 80%;
+		margin: auto;
+	}
+
+	& .price {
+		padding-top: 4rem;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		& .views {
+			font-size: 20px;
+			word-spacing: 2px;
+			letter-spacing: 2px;
+			color: $text;
+		}
+
+		& .month_price {
+			position: relative;
+			font-size: 20px;
+			word-spacing: 2px;
+			// letter-spacing: 0px;
+			color: $text;
+
+			& span {
+				position: absolute;
+				top: -20px;
+				right: 80px;
+				font-size: 45px;
+				word-spacing: 2px;
+				// letter-spacing: 0px;
+				color: $text_CTABackground;
+			}
+		}
 	}
 }

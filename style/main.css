@@ -2,11 +2,16 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  background-image: url(/img/bg-pattern.svg);
+  background-position: center;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-size: contain;
   background-color: hsl(230deg, 100%, 99%);
   font-family: "Manrope", sans-serif;
 }
 
-.header {
+header {
   background-image: url("/img/pattern-circles.svg");
   background-repeat: no-repeat;
   background-size: contain;
@@ -17,13 +22,54 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   margin: 4rem auto;
+  text-align: center;
 }
-.header h1 {
+header h1 {
   padding-top: 3.8rem;
   color: hsl(227deg, 35%, 25%);
   font-weight: 800;
+  font-size: 40px;
 }
-.header h3 {
+header h3 {
   color: hsl(225deg, 20%, 60%);
   font-weight: 600;
+}
+
+main {
+  width: 50rem;
+  height: 30rem;
+  background-color: hsl(0deg, 0%, 100%);
+  margin: auto;
+  box-shadow: 1px 1px 20px 1px rgba(133, 143, 173, 0.2);
+  border-radius: 10px;
+}
+main .container {
+  width: 80%;
+  margin: auto;
+}
+main .price {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+main .price .views {
+  font-size: 20px;
+  word-spacing: 2px;
+  letter-spacing: 2px;
+  color: hsl(225deg, 20%, 60%);
+}
+main .price .month_price {
+  position: relative;
+  font-size: 20px;
+  word-spacing: 2px;
+  color: hsl(225deg, 20%, 60%);
+}
+main .price .month_price span {
+  position: absolute;
+  top: -20px;
+  right: 80px;
+  font-size: 45px;
+  word-spacing: 2px;
+  color: hsl(227deg, 35%, 25%);
 }/*# sourceMappingURL=main.css.map */
