@@ -72,4 +72,132 @@ main .price .month_price span {
   font-size: 45px;
   word-spacing: 2px;
   color: hsl(227deg, 35%, 25%);
+}
+main .slider {
+  margin-top: 3rem;
+}
+main .slider .bar {
+  margin: auto;
+  width: 98%;
+  height: 10px;
+  border-radius: 10px;
+  background-color: hsl(224deg, 65%, 95%);
+}
+main .slider .bar .fill {
+  position: relative;
+  width: 50%;
+  max-width: 100%;
+  min-width: 0%;
+  height: 10px;
+  border-radius: 10px;
+  background-color: hsl(174deg, 77%, 80%);
+}
+main .slider .bar .fill .slideBtn {
+  position: absolute;
+  right: -20px;
+  top: -15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: hsl(174deg, 86%, 45%);
+  background-image: url("/img/icon-slider.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 25px;
+  box-shadow: 1px 20px 20px 5px rgba(16, 213, 194, 0.4);
+}
+main .slider .bar .fill .slideBtn:hover {
+  background-color: hsl(174deg, 85%, 35%);
+  cursor: pointer;
+}
+main .toggle {
+  display: flex;
+  flex-direction: row;
+  padding-top: 2.5rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+  margin-left: 10rem;
+}
+main .toggle input[type=checkbox] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+main .toggle label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 60px;
+  height: 30px;
+  background: hsl(224deg, 65%, 95%);
+  display: block;
+  border-radius: 100px;
+  position: relative;
+  margin: 1rem 0.8rem;
+}
+main .toggle label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.2s;
+}
+main .toggle input:checked + label {
+  background: hsl(174deg, 86%, 45%);
+}
+main .toggle input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+main .toggle label:active:after {
+  width: 50px;
+}
+main .toggle h4 {
+  color: hsl(225deg, 20%, 60%);
+  font-size: 15px;
+}
+main .toggle h4.discount {
+  color: hsl(15deg, 100%, 70%);
+  background-color: hsl(14deg, 92%, 95%);
+  padding: 2px 4px;
+  margin: 1rem 0.5rem;
+  border-radius: 10px;
+}
+main div {
+  position: relative;
+}
+main div ul {
+  margin-top: 2rem;
+}
+main div ul li {
+  margin: 1rem;
+  padding-left: 0.5rem;
+  color: hsl(225deg, 20%, 60%);
+  list-style: url("/img/icon-check.svg");
+}
+main div button {
+  position: absolute;
+  color: hsl(226deg, 100%, 87%);
+  font-size: 15px;
+  font-weight: 800;
+  background-color: hsl(227deg, 35%, 25%);
+  width: 200px;
+  height: 60px;
+  top: 18px;
+  right: 20px;
+  padding: 20px;
+  border: none;
+  border-radius: 100px;
+}
+main div button:hover {
+  color: hsl(230deg, 100%, 99%);
+  cursor: pointer;
+}
+main hr {
+  border: 1px solid hsl(224deg, 65%, 95%);
 }/*# sourceMappingURL=main.css.map */

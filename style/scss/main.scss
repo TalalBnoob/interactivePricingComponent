@@ -80,4 +80,149 @@ main {
 			}
 		}
 	}
+
+	& .slider {
+		margin-top: 3rem;
+
+		& .bar {
+			margin: auto;
+			width: 98%;
+			height: 10px;
+			border-radius: 10px;
+			background-color: $emptySliderBar;
+
+			& .fill {
+				position: relative;
+				width: 50%;
+				max-width: 100%;
+				min-width: 0%;
+				height: 10px;
+				border-radius: 10px;
+				background-color: $fullSliderBar;
+
+				& .slideBtn {
+					position: absolute;
+					right: -20px;
+					top: -15px;
+					width: 40px;
+					height: 40px;
+					border-radius: 50%;
+					background-color: $sliderBackground;
+					background-image: url('/img/icon-slider.svg');
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: 25px;
+					box-shadow: 1px 20px 20px 5px rgba($color: $sliderBackground, $alpha: 0.4);
+
+					&:hover {
+						background-color: $activeSliderBackground;
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
+
+	& .toggle {
+		display: flex;
+		flex-direction: row;
+		padding-top: 2.5rem;
+		width: fit-content;
+		margin: auto;
+		margin-left: 10rem;
+
+		input[type='checkbox'] {
+			height: 0;
+			width: 0;
+			visibility: hidden;
+		}
+
+		label {
+			cursor: pointer;
+			text-indent: -9999px;
+			width: 60px;
+			height: 30px;
+			background: $emptySliderBar;
+			display: block;
+			border-radius: 100px;
+			position: relative;
+			margin: 1rem 0.8rem;
+		}
+
+		label:after {
+			content: '';
+			position: absolute;
+			top: 5px;
+			left: 5px;
+			width: 20px;
+			height: 20px;
+			background: #fff;
+			border-radius: 90px;
+			transition: 0.2s;
+		}
+
+		input:checked + label {
+			background: $sliderBackground;
+		}
+
+		input:checked + label:after {
+			left: calc(100% - 5px);
+			transform: translateX(-100%);
+		}
+
+		label:active:after {
+			width: 50px;
+		}
+
+		& h4 {
+			color: $text;
+			font-size: 15px;
+		}
+
+		& h4.discount {
+			color: $discountText;
+			background-color: $discountBackground;
+			padding: 2px 4px;
+			margin: 1rem 0.5rem;
+			border-radius: 10px;
+		}
+	}
+
+	& div {
+		position: relative;
+		& ul {
+			margin-top: 2rem;
+
+			& li {
+				margin: 1rem;
+				padding-left: 0.5rem;
+				color: $text;
+				list-style: url('/img/icon-check.svg');
+			}
+		}
+
+		& button {
+			position: absolute;
+			color: $CTA_Text;
+			font-size: 15px;
+			font-weight: 800;
+			background-color: $text_CTABackground;
+			width: 200px;
+			height: 60px;
+			top: 18px;
+			right: 20px;
+			padding: 20px;
+			border: none;
+			border-radius: 100px;
+
+			&:hover {
+				color: $mainBackground;
+				cursor: pointer;
+			}
+		}
+	}
+
+	hr {
+		border: 1px solid $emptySliderBar;
+	}
 }
